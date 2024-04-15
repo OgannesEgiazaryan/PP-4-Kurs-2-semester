@@ -1,0 +1,31 @@
+﻿<Page x:Class="WpfApp19.AdminsForm.LogsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp19.AdminsForm"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LogsPage" IsVisibleChanged="o">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="\Resources\2655.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="377*"></RowDefinition>
+            <RowDefinition Height="110*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Name="Repair_List" Margin="93,0,10,0" Height="328" VerticalAlignment="Center">
+
+        </ListBox>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Width="338" Margin="195,0,0,71"  Height="30" VerticalAlignment="Bottom" >
+            <TextBlock Text="Поиск" Width="69" TextAlignment="Right" Foreground="Black" FontSize="24" Height="40" Margin="0,0,0,0"/>
+            <TextBox x:Name="poisk2" Height="33" Margin="15,5,0,0" Width="245"  TextChanged="poisk2_TextChanged"/>
+        </StackPanel>
+        <Label Grid.Row="1" Name="Count"  Content="Label" HorizontalAlignment="Left" Margin="556,0,0,71" VerticalAlignment="Bottom" Width="234" FontSize="15"/>
+
+    </Grid>
+</Page>

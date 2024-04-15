@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp19.UsersForms.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp19.UsersForms"
+        mc:Ignorable="d"
+        Title="Окно пользователя" Height="700" Width="800">
+    <Grid Margin="0,0,0,-38" Panel.ZIndex="-2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\azuli\source\repos\WpfApp12\WpfApp12\Icons\2655.jpg"/>
+        </Grid.Background>
+        <Button Name="Close" Content="Закрыть" Style="{StaticResource gridEditButton}" HorizontalAlignment="Left" Click="Close_Click" Margin="9,10,0,0" Height="59" Width="67" VerticalAlignment="Top">
+            <Button.ContentTemplate >
+                <DataTemplate >
+                    <Image  Source="/Resources/close.png"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated_1"></Frame>
+
+        <Button Grid.Row="1" Content="Добавить" Style="{StaticResource gridEditButton}" HorizontalAlignment="Left" Name="Types"
+ Width="50" Height="40" VerticalAlignment="Top" Margin="10,205,0,0" Click="Types_Click">
+            <Button.ContentTemplate >
+                <DataTemplate >
+                    <Image  Source="/resources/dish.png" Stretch="Fill"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+
+        <Button Grid.Row="1" Content="Добавить" Style="{StaticResource gridEditButton}" HorizontalAlignment="Left" Name="Repair"
+ Width="50" Height="40" VerticalAlignment="Top" Margin="10,141,0,0" Click="Next_Click">
+            <Button.ContentTemplate >
+                <DataTemplate >
+                    <Image  Source="/Resources/clipboard.png" Stretch="Fill"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Label Name="Logged_User" FontSize="24" Content="Label" HorizontalAlignment="Left" Margin="440,19,0,0" VerticalAlignment="Top" Width="350"/>
+    </Grid>
+</Window>

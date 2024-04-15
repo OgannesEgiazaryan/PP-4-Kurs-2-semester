@@ -1,0 +1,89 @@
+﻿<Page x:Class="WpfApp19.Add_or_Edit.UsersEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp19.Add_or_Edit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TypesEditPage" IsVisibleChanged="Page_IsVisibleChanged" Language="en-EN">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Resources\2655.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Логин" TextAlignment="Center"  HorizontalAlignment="Left"
+VerticalAlignment="Top" FontFamily="Tahoma" FontSize="19" Height="28"
+Width="89" Margin="57,17,0,0" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.588"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.256"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock >
+        <TextBlock Text="ФИО" Grid.Row="1" HorizontalAlignment="Center"
+VerticalAlignment="Center" FontFamily="Tahoma" FontSize="19" Height="25"
+Width="150"/>
+        <TextBlock Text="Баланс" Grid.Row="2" HorizontalAlignment="Center"
+VerticalAlignment="Center" FontFamily="Tahoma" FontSize="19" Height="25"
+Width="150"/>
+        <TextBlock Text="Роль" Grid.Row="3" HorizontalAlignment="Left"
+VerticalAlignment="Center" FontFamily="Tahoma" FontSize="19" Height="25"
+Width="188" Margin="75,0,0,0"/>
+        <TextBlock Text="Фото" Grid.Row="4" HorizontalAlignment="Left"
+VerticalAlignment="Center" FontFamily="Tahoma" FontSize="19" Height="27"
+Width="190" Margin="75,0,0,0"></TextBlock>
+        <TextBlock Text="Телефон" Grid.Row="5" HorizontalAlignment="Left"
+VerticalAlignment="Center" FontFamily="Tahoma" FontSize="19" Height="27"
+Width="190" Margin="75,0,0,0"></TextBlock>
+        <TextBlock Text="Эл. Почта" Grid.Row="6" HorizontalAlignment="Left"
+VerticalAlignment="Center" FontFamily="Tahoma" FontSize="19" Height="27"
+Width="190" Margin="75,0,0,0"></TextBlock>
+
+
+
+
+        <TextBox x:Name="t1"  Text="{Binding Login}" Grid.Column="1" Grid.Row="0" Width="300" Height="35"
+HorizontalAlignment="Left" />
+        <TextBox x:Name="t2" Text="{Binding Name}" Grid.Row="1" Grid.Column="1" Height="35"
+Width="300" HorizontalAlignment="Left"/>
+        <TextBox x:Name="t3" Text="{Binding Balance}" Grid.Row="2" Grid.Column="1" Height="35"
+Width="300" HorizontalAlignment="Left"/>
+        <TextBox Name="textFotoPath" Text="{Binding Photo}" Grid.Row="4" Grid.Column="1" Width="300" Height="35"
+HorizontalAlignment="Left" />
+        <TextBox x:Name="t4" Text="{Binding Phone}" Grid.Row="5" Grid.Column="1" Height="35"
+Width="300" HorizontalAlignment="Left"/>
+        <TextBox x:Name="t5" Text="{Binding Email}" Grid.Row="6" Grid.Column="1" Height="35"
+Width="300" HorizontalAlignment="Left"/>
+
+
+
+
+        <ComboBox x:Name="cmb1" SelectedItem="{Binding Roles}" Grid.Row="3" Grid.Column="1" Width="300" Height="35"
+HorizontalAlignment="Left"></ComboBox>
+        <Button Name="btnSave" Style="{StaticResource gridEditButton}" Click="btnSave_Click" Content="Сохранить" Width="200"
+Height="35" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right"/>
+        <Button Name="btnFotoPath" Style="{StaticResource gridEditButton}" Content="Выбрать фото" Grid.Row="4" Grid.Column="1"
+Click="btnFotoPath_Click" Width="150" Height="35" HorizontalAlignment="Right"/>
+        <Button Name="btnBack" Style="{StaticResource gridEditButton}" Click="btnBack_Click" Content="Назад" Height="35" Width="150"
+Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left" />
+
+    </Grid>
+</Page>
